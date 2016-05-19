@@ -1,0 +1,14 @@
+$.ajax({
+    type: "GET",
+    cache: false,
+    url: '/dishTypes',
+    data: "",
+    success: function (response) {
+        for (var i = 0; i < response.length; i++){
+            $('#dish_types').append('<tr><th>' + response[i].name + '</th></tr>');
+        }
+        /!*$.each(response.data, function (i) {
+         $('#dish_types').append('<tr><th>' + response[i].name + '</th></tr>');
+         });*!/
+    }
+});
